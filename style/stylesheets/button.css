@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url('../fonts/Montserrat-Regular.otf?1428713109') format('opentype');
+}
+@font-face {
+  font-family: "Montserrat-Light";
+  src: url('../fonts/Montserrat-Light.otf?1428713109') format('opentype');
+}
+/* line 24, ../sass/_base.scss */
+* {
+  font-family: Montserrat-Light, serif;
+  outline: none;
+}
+
+/* line 19, ../sass/button.scss */
+button {
+  background: transparent;
+  height: 33.33333px;
+  width: 100px;
+}
+
+/* line 7, ../sass/button.scss */
+button.button-primary {
+  border: solid 1px #00ffff;
+  color: #00ffff;
+}
+/* line 12, ../sass/button.scss */
+button.button-primary:hover {
+  background-color: #00ffff;
+  color: #0d1b1b;
+  font-family: Montserrat;
+}
+
+/* line 7, ../sass/button.scss */
+button.button-secondary {
+  border: solid 1px #ff5035;
+  color: #ff5035;
+}
+/* line 12, ../sass/button.scss */
+button.button-secondary:hover {
+  background-color: #ff5035;
+  color: #0d1b1b;
+  font-family: Montserrat;
+}

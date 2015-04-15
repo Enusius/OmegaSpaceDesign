@@ -1,0 +1,24 @@
+@import "base";
+
+form label {
+  display: block;
+  margin : 20px 15px;
+}
+
+input {
+  @include border-radius(8px);
+  @include box-shadow(0 0 10px $primary-color-0 inset);
+
+  background-color: $primary-color-3;
+  border: 0;
+  color: $primary-color-4;
+  font-family: Montserrat-Light;
+  padding: 10px;
+
+  &[type="password"] {
+    font: small-caption;
+    font-size: 24px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+}

@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url('../fonts/Montserrat-Regular.otf?1428713109') format('opentype');
+}
+@font-face {
+  font-family: "Montserrat-Light";
+  src: url('../fonts/Montserrat-Light.otf?1428713109') format('opentype');
+}
+/* line 24, ../sass/_base.scss */
+* {
+  font-family: Montserrat-Light, serif;
+  outline: none;
+}
+
+/* line 13, ../sass/list.scss */
+ul {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  padding: 0;
+}
+/* line 4, ../sass/list.scss */
+ul li:nth-child(even) {
+  background-color: #293333;
+}
+/* line 8, ../sass/list.scss */
+ul li:nth-child(odd) {
+  background-color: #515e5e;
+}
+/* line 22, ../sass/list.scss */
+ul li {
+  padding: 10px;
+}
+
+/* line 28, ../sass/list.scss */
+ul.selectable li:hover {
+  color: #ff3100;
+  cursor: pointer;
+}

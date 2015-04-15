@@ -1,0 +1,31 @@
+@import "base";
+
+$default-button-width: 100px;
+$default-button-height: $default-button-width / 3;
+
+@mixin button($color, $background-color) {
+  & {
+    border: solid 1px $color;
+    color: $color;
+  }
+
+  &:hover {
+    background-color: $color;
+    color: $background-color;
+    font-family: Montserrat;
+  }
+}
+
+button {
+  background: transparent;
+  height: $default-button-height;
+  width: $default-button-width;
+}
+
+button.button-primary {
+  @include button($secondary-color-1-2, $primary-color-1);
+}
+
+button.button-secondary {
+  @include button($secondary-color-2-3, $primary-color-1);
+}

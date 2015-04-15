@@ -1,0 +1,10 @@
+@import "base";
+
+div.tiling {
+  @include box-shadow($primary-color-1 1px 1px 3px);
+
+  background-color: $primary-color-1;
+  color: $primary-color-4;
+  margin: 20px;
+  padding: 20px;
+}

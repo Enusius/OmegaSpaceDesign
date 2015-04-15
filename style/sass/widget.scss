@@ -1,0 +1,50 @@
+@import "base";
+
+$default-diameter: 30px;
+
+@mixin widget-button-color($color, $background-color) {
+  & {
+    @include box-shadow(0 0 6px $background-color);
+
+    background-color: $background-color;
+    color: $color;
+  }
+
+  &:hover {
+    @include box-shadow(0 0 6px $color);
+
+    background-color: $color;
+    color: $background-color;
+  }
+}
+
+.widget-wrapper {
+  @include border-radius(50px);
+  @include box-shadow(0 0 6px $primary-color-0 inset);
+
+  background-color: $primary-color-2;
+  display: inline-block;
+  padding: 3px;
+}
+
+.widget-button {
+  @include border-radius(50px);
+
+  cursor: pointer;
+  display: inline-block;
+  height: $default-diameter;
+  line-height: $default-diameter;
+  margin: 10px;
+  text-align: center;
+  width: $default-diameter;
+}
+
+.widget-button-blue {
+  @extend .widget-button;
+  @include widget-button-color($primary-color-4, $secondary-color-1-1);
+}
+
+.widget-button-red {
+  @extend .widget-button;
+  @include widget-button-color($primary-color-4, $secondary-color-2-2);
+}

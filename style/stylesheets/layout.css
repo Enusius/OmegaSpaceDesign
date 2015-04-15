@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url('../fonts/Montserrat-Regular.otf?1428713109') format('opentype');
+}
+@font-face {
+  font-family: "Montserrat-Light";
+  src: url('../fonts/Montserrat-Light.otf?1428713109') format('opentype');
+}
+/* line 24, ../sass/_base.scss */
+* {
+  font-family: Montserrat-Light, serif;
+  outline: none;
+}
+
+/* line 3, ../sass/layout.scss */
+body {
+  background-color: #293333;
+}
+
+/* line 7, ../sass/layout.scss */
+h1, h2, h3, h4, h5, h6 {
+  color: #006464;
+}

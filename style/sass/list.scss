@@ -1,0 +1,32 @@
+@import "base";
+
+@mixin stripping-list-rows($even-row-color, $odd-row-color) {
+  li:nth-child(even) {
+    background-color: $even-row-color;
+  }
+
+  li:nth-child(odd) {
+    background-color: $odd-row-color;
+  }
+}
+
+ul {
+  $even-row-color: $primary-color-2;
+  $odd-row-color: $primary-color-3;
+
+  @include no-bullet;
+  @include stripping-list-rows($even-row-color, $odd-row-color);
+
+  padding: 0;
+
+  li {
+    padding: 10px;
+  }
+}
+
+ul.selectable {
+  li:hover {
+    color: $secondary-color-2-2;
+    cursor: pointer;
+  }
+}
