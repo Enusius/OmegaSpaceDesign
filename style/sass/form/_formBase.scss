@@ -1,0 +1,24 @@
+@import "../_base";
+
+div.form label {
+  display: inline-block;
+  margin: 20px 15px;
+}
+
+@mixin form-element-appearance() {
+  & {
+    @include border-radius(4px);
+    @include box-shadow(1px 0 10px $primary-color-0 inset);
+    @include text-shadow(1px 1px 1px $primary-color-0);
+
+    background-color: $secondary-color-1-0;
+    border: 0;
+    color: $primary-color-4;
+    font-family: Montserrat-Light;
+    padding: 10px;
+  }
+}
+
+input, textarea, select, option {
+  @include form-element-appearance();
+}

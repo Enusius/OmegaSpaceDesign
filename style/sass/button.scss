@@ -3,16 +3,20 @@
 $default-button-width: 100px;
 $default-button-height: $default-button-width / 3;
 
-@mixin button($color, $background-color) {
+@mixin button($background-color, $color) {
   & {
-    border: solid 1px $color;
+    @include box-shadow(0 0 1px darken($background-color, 20%));
+
+    background-color: $background-color;
+    border : none;
+    @include border-radius(3px);
     color: $color;
+    font-family: Montserrat;
   }
 
-  &:hover {
-    background-color: $color;
-    color: $background-color;
-    font-family: Montserrat;
+  &.clicked
+  {
+    @include box-shadow(0 0 10px $primary-color-0 inset);
   }
 }
 
@@ -27,5 +31,5 @@ button.button-primary {
 }
 
 button.button-secondary {
-  @include button($secondary-color-2-3, $primary-color-1);
+  @include button($secondary-color-2-2, $primary-color-1);
 }

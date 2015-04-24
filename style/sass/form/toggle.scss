@@ -1,0 +1,98 @@
+@import "formBase";
+
+input.toggle {
+
+  $width: 60px;
+  $round-diameter: (13 * $width) / 30;
+
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 2px;
+    width: $width;
+    height: $width/2;
+    border-radius: 60px;
+    transition: background 0.4s;
+
+    &:before, &:after {
+      position: absolute;
+      content: "";
+    }
+
+    &:before {
+      top: 2px;
+      left: 2px;
+      bottom: 2px;
+      right: 2px;
+      border-radius: 60px;
+      transition: background 0.4s;
+    }
+
+    &:after {
+      top: 4px;
+      left: 4px;
+      bottom: 4px;
+      width: $round-diameter;
+      border-radius: 52px;
+      transition: margin 0.4s, background 0.4s;
+      @include box-shadow(2px 1px 0 $primary-color-2);
+    }
+  }
+
+  &:checked + label {
+
+    &:after {
+      margin-left: $width/2;
+    }
+  }
+}
+
+@mixin input-toggle-color($background-color-on, $background-color-off,
+                          $border-color-on, $border-color-off,
+                          $round-color-on, $round-color-off) {
+  & + label {
+    background-color: $border-color-off;
+
+    &:before {
+      background-color: $background-color-off;
+      @include box-shadow(1px 1px 10px $primary-color-0 inset);
+    }
+
+    &:after {
+      background-color: $round-color-off;
+      @include box-shadow(2px 1px 0 darken($round-color-off, 20%));
+    }
+  }
+
+  &:checked + label {
+    background-color: $border-color-on;
+
+    &:before {
+      background-color: $background-color-on;
+    }
+
+    &:after {
+      background-color: $round-color-on;
+      @include box-shadow(-2px 1px 0 darken($round-color-on, 20%));
+    }
+  }
+}
+
+input.toggle-blue {
+  @extend .toggle;
+  @include input-toggle-color($primary-color-3, $secondary-color-1-0, $secondary-color-1-2, $primary-color-2, $secondary-color-1-2, $primary-color-3);
+
+}
+
+input.toggle-red {
+  @extend .toggle;
+  @include input-toggle-color($primary-color-3, $secondary-color-2-0, $secondary-color-2-2, $primary-color-2, $secondary-color-2-2, $primary-color-3);
+}

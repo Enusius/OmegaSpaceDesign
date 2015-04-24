@@ -11,22 +11,19 @@
 }
 
 ul {
-  $even-row-color: $primary-color-2;
-  $odd-row-color: $primary-color-3;
+  $even-row-color: $secondary-color-1-0;
+  $odd-row-color: $secondary-color-1-1;
 
   @include no-bullet;
   @include stripping-list-rows($even-row-color, $odd-row-color);
 
+
+  border : solid 1px $secondary-color-1-0;
+  display : inline-block;
   padding: 0;
+  text-shadow: 1px 1px 1px $primary-color-0;
 
   li {
     padding: 10px;
-  }
-}
-
-ul.selectable {
-  li:hover {
-    color: $secondary-color-2-2;
-    cursor: pointer;
   }
 }

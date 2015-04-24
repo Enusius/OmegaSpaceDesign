@@ -4,14 +4,14 @@ $default-diameter: 30px;
 
 @mixin widget-button-color($color, $background-color) {
   & {
-    @include box-shadow(0 0 6px $background-color);
+    @include box-shadow(0 0 6px darken($background-color, 20%));
 
     background-color: $background-color;
     color: $color;
   }
 
   &:hover {
-    @include box-shadow(0 0 6px $color);
+    @include box-shadow(0 0 6px darken($color, 20%));
 
     background-color: $color;
     color: $background-color;

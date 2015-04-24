@@ -1,7 +1,7 @@
 @import "base";
 
 div.tiling {
-  @include box-shadow($primary-color-1 1px 1px 3px);
+  @include box-shadow(0 0 15px $primary-color-0 inset);
 
   background-color: $primary-color-1;
   color: $primary-color-4;

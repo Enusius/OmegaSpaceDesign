@@ -1,0 +1,65 @@
+@import "base";
+
+calendar {
+
+  $width: 400px;
+
+  width: $width;
+  display: inline-block;
+
+  div.header {
+    padding: 20px;
+    background-color: $secondary-color-1-1;
+    text-align: center;
+
+    i:first-child {
+      float: left;
+    }
+
+    i:last-child {
+      float: right;
+    }
+  }
+
+  $DAYS_A_WEEK: 7;
+  $day-name-width: $width / $DAYS_A_WEEK;
+  $day-margin: 8px;
+  $border-size : 2px;
+  $day-width: $day-name-width - (2 * ($day-margin + $border-size));
+
+  div.week span.day, div.names span.day {
+    display: inline-block;
+    text-align: center;
+  }
+
+  div.names span.day {
+    width: $day-name-width;
+    height: $day-name-width;
+    line-height: $day-name-width;
+  }
+
+  div.week span.day {
+    @include border-radius(50px);
+
+    border : solid $border-size $primary-color-2;
+    cursor: pointer;
+    height: $day-width;
+    line-height: $day-width;
+    margin: $day-margin;
+    width: $day-width;
+  }
+
+  div.week span.day.today{
+    border-color : $secondary-color-2-0;
+    background-color: $secondary-color-2-1 !important;
+  }
+
+  div.week span.day.selected{
+    background-color: $secondary-color-1-2;
+    color : black;
+    @include box-shadow(1px 1px 21px black inset);
+  }
+
+
+
+}

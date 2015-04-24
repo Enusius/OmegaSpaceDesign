@@ -11,22 +11,24 @@
 }
 
 table {
-  $even-row-color: $primary-color-2;
-  $odd-row-color: $primary-color-3;
+  $header-color : $secondary-color-1-1;
+  $even-row-color: lighten($primary-color-1, 5%);
+  $odd-row-color: lighten($primary-color-1, 10%);
 
   @include table-scaffolding;
-  @include stripping-body-rows($even-row-color, $odd-row-color);
+  @include stripping-body-rows ($even-row-color, $odd-row-color);
 
   border: solid 1px $secondary-color-1-0;
   border-collapse: collapse;
 
   thead > tr {
-    background-color: $secondary-color-1-1;
+    background-color: $header-color;
   }
 
   th {
-    border-bottom: solid 2px $secondary-color-1-0;
+    border-bottom: solid 2px darken($header-color, 10%);
     padding: 8px 20px;
+    @include text-shadow(1px 1px 1px $primary-color-0);
   }
 
   td {

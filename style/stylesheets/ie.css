@@ -1,5 +1,40 @@
-/* Welcome to Compass. Use this file to write IE specific override styles.
- * Import this file using the following HTML or equivalent:
- * <!--[if IE]>
- *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
- * <![endif]--> */
+/*
+Error: Invalid CSS after "": expected selector or at-rule, was "/* Welcome to C..."
+        on line 1 of C:/Users/David/WebstormProjects/OmegaSpaceDesign/style/sass/ie.scss
+
+1: /* Welcome to Compass. Use this file to write IE specific override styles.
+2:  * Import this file using the following HTML or equivalent:
+3:  * <!--[if IE]>
+4:  *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+5:  * <![endif]--> *
+
+Backtrace:
+C:/Users/David/WebstormProjects/OmegaSpaceDesign/style/sass/ie.scss:1
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:1165:in `expected'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:1101:in `expected'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:43:in `parse'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:393:in `_to_tree'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:268:in `render'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:40:in `compile!'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-1.0.3/lib/compass/commands/update_project.rb:49:in `perform'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-1.0.3/bin/compass:44:in `call'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
+C:/Ruby22-x64/bin/compass:23:in `load'
+C:/Ruby22-x64/bin/compass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"\": expected selector or at-rule, was \"/* Welcome to C...\"\A         on line 1 of C:/Users/David/WebstormProjects/OmegaSpaceDesign/style/sass/ie.scss\A \A 1: /* Welcome to Compass. Use this file to write IE specific override styles.\A 2:  * Import this file using the following HTML or equivalent:\A 3:  * <!--[if IE]>\A 4:  *   <link href=\"/stylesheets/ie.css\" media=\"screen, projection\" rel=\"stylesheet\" type=\"text/css\" />\A 5:  * <![endif]--> *"; }

@@ -15,15 +15,92 @@
     <link href="style/stylesheets/button.css" media="screen" rel="stylesheet" type="text/css"/>
     <link href="style/stylesheets/table.css" media="screen" rel="stylesheet" type="text/css"/>
     <link href="style/stylesheets/list.css" media="screen" rel="stylesheet" type="text/css"/>
-    <link href="style/stylesheets/form.css" media="screen" rel="stylesheet" type="text/css"/>
     <link href="style/stylesheets/widget.css" media="screen" rel="stylesheet" type="text/css"/>
     <link href="style/stylesheets/tiling.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="style/stylesheets/calendar.css" media="screen" rel="stylesheet" type="text/css"/>
 
+    <link href="style/stylesheets/form/input.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="style/stylesheets/form/radio.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="style/stylesheets/form/fileUpload.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="style/stylesheets/form/toggle.css" media="screen" rel="stylesheet" type="text/css"/>
+
+    <script src="script/jquery.min.js"></script>
+    <script src="script/button.js"></script>
+    <script src="script/calendar.js"></script>
 
 </head>
 <body>
 <div class="tiling">
     <h1>Lorem ipsum dolor sit amet</h1>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium aut, blanditiis consectetur
+        cumque deserunt, distinctio, esse ipsam obcaecati pariatur praesentium quaerat quis rem reprehenderit sapiente
+        sit voluptas voluptatem voluptatum.</p>
+    <button class="button-primary">OK</button>
+    <button class="button-secondary">CANCEL</button>
+</div>
+<div class="tiling">
+    <div class="form">
+        <label>
+            <h4>TEXT</h4>
+            <input type="text"/>
+        </label>
+        <label>
+            <h4>FILE</h4>
+
+            <div class="file-upload">
+                <button class="button-primary">BROWSE</button>
+                <span class="file-name">example.dll</span>
+            </div>
+        </label>
+        <label>
+            <h4>SELECT</h4>
+            <select name="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option>
+            </select>
+        </label>
+        <label>
+            <h4>TEXTAREA</h4>
+            <textarea name="" id="" cols="30" rows="10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis commodi debitis, eius eum eveniet ipsum laborum maxime odit officiis optio placeat possimus quis rem repudiandae, sapiente voluptatibus. Enim, illum.</textarea>
+        </label>
+        <label>
+            <h4>RED SWITCH</h4>
+            <input id="cmn-toggle-4" class="toggle-blue" type="checkbox">
+            <label for="cmn-toggle-4"></label>
+        </label>
+        <label>
+            <h4>RED SWITCH</h4>
+            <input id="cmn-toggle-3" class="toggle-red" type="checkbox">
+            <label for="cmn-toggle-3"></label>
+        </label>
+        <br/>
+        <h4>RADIO</h4>
+        <label>
+            Choix X
+            <input id="check" type="radio" name="check" value="check2">
+            <label for="check"></label>
+        </label>
+        <label>
+            Choix X
+            <input id="check2" type="radio" name="check" value="check2">
+            <label for="check2"></label>
+        </label>
+        <label>
+            Choix X
+            <input id="check3" type="radio" name="check" value="check2">
+            <label for="check3"></label>
+        </label>
+        <label>
+            Choix X
+            <input id="check4" type="radio" name="check" value="check2">
+            <label for="check4"></label>
+        </label>
+    </div>
+</div>
+<div class="tiling">
     <table>
         <thead>
         <tr>
@@ -93,15 +170,10 @@
         </tr>
         </tbody>
     </table>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium aut, blanditiis consectetur
-        cumque deserunt, distinctio, esse ipsam obcaecati pariatur praesentium quaerat quis rem reprehenderit sapiente
-        sit voluptas voluptatem voluptatum.</p>
-    <button class="button-primary">OK</button>
-    <button class="button-secondary">CANCEL</button>
 </div>
 <div class="tiling">
-    <ul class="selectable">
+    <ul>
+        <div class="shadow"></div>
         <li>Lorem ipsum dolor</li>
         <li>at ea excepturi</li>
         <li>harum inventore ipsum</li>
@@ -120,61 +192,70 @@
             <i class="fa fa-times"></i>
         </div>
     </div>
-    <div class="widget-wrapper">
-        <div class="widget-button-blue">
-            <i class="fa fa-times"></i>
-        </div>
-    </div>
-    <div class="widget-wrapper">
-        <div class="widget-button-red">
-            <i class="fa fa-times"></i>
-        </div>
-    </div>
 </div>
-<div class="tiling">
-    <form>
-        <label>
-            TEXT
-            <input type="text"/>
-        </label>
-        <label>
-            CHECKBOX
-            <input type="checkbox"/>
-        </label>
-        <label>
-            FILE
-            <input type="file"/>
-        </label>
 
-        <label>
-            RADIO
-            <input type="radio"/>
-        </label>
-        <label>
-            SELECT
-            <select name="cars">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="fiat">Fiat</option>
-                <option value="audi">Audi</option>
-            </select>
-        </label>
-        <label>
-            TEXTAREA
-            <textarea name="" id="" cols="30" rows="10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis commodi debitis, eius eum eveniet ipsum laborum maxime odit officiis optio placeat possimus quis rem repudiandae, sapiente voluptatibus. Enim, illum.</textarea>
-        </label>
-        <label>
-            INPUT LIST
-            <input list="browsers">
-            <datalist id="browsers">
-                <option value="Internet Explorer">
-                <option value="Firefox">
-                <option value="Chrome">
-                <option value="Opera">
-                <option value="Safari">
-            </datalist>
-        </label>
-    </form>
+<div class="tiling">
+    <calendar>
+        <div class="header">
+            <i class="fa fa-chevron-circle-left"></i>
+            <span>April, 2015</span>
+            <i class="fa fa-chevron-circle-right"></i>
+        </div>
+        <div class="names">
+            <span class="day">Sun</span><!--
+            --><span class="day">Mon</span><!--
+            --><span class="day">Tue</span><!--
+            --><span class="day">Wed</span><!--
+            --><span class="day">Thu</span><!--
+            --><span class="day">Fri</span><!--
+            --><span class="day">Sat</span>
+        </div>
+        <div class="week">
+            <span class="day">1</span><!--
+            --><span class="day">2</span><!--
+            --><span class="day">3</span><!--
+            --><span class="day">4</span><!--
+            --><span class="day">5</span><!--
+            --><span class="day">6</span><!--
+            --><span class="day today">7</span>
+        </div>
+        <div class="week">
+            <span class="day">8</span><!--
+            --><span class="day">9</span><!--
+            --><span class="day">10</span><!--
+            --><span class="day">11</span><!--
+            --><span class="day">12</span><!--
+            --><span class="day">13</span><!--
+            --><span class="day">14</span>
+        </div>
+        <div class="week">
+            <span class="day">15</span><!--
+            --><span class="day">16</span><!--
+            --><span class="day">17</span><!--
+            --><span class="day">18</span><!--
+            --><span class="day">19</span><!--
+            --><span class="day">20</span><!--
+            --><span class="day">21</span>
+        </div>
+        <div class="week">
+            <span class="day">22</span><!--
+            --><span class="day">23</span><!--
+            --><span class="day">24</span><!--
+            --><span class="day">25</span><!--
+            --><span class="day">26</span><!--
+            --><span class="day">27</span><!--
+            --><span class="day">28</span>
+        </div>
+        <div class="week">
+            <span class="day">29</span><!--
+            --><span class="day">30</span><!--
+            --><span class="day">31</span><!--
+            --><span class="day">1</span><!--
+            --><span class="day">2</span><!--
+            --><span class="day">3</span><!--
+            --><span class="day">4</span>
+        </div>
+    </calendar>
 </div>
 
 </body>
